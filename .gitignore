@@ -26,7 +26,7 @@ speed-measure-plugin.json
 *.csv
 *.xlsx
 /pandas
-/_pycache_
+/__pycache__
 
 # IDE - VSCode
 .vscode/*
