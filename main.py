@@ -1,5 +1,4 @@
 from model import migrationModel
-import python_minifier
 
 def main():
     print('hello python')
@@ -20,5 +19,4 @@ def main():
     mm.processListOfRefNumber(refNumberArray , migrationDataArray , rulesDataArray)
 
 if __name__ == "__main__":
-    with open('model.py') as f:
-        print(python_minifier.minify(f.read()))
+    main()
