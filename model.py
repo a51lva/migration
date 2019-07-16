@@ -18,6 +18,16 @@ class migrationModel:
             if((len(workDataArrayP)) == (len(migrationWorkDataArrayP))):
                     count = 0
                     for item in migrationWorkDataArrayP:
+                        workItem = workDataArrayP[count]
+                        result = result + ( str(workItem[0]).replace('nan','') + ";" + str(workItem[1]).replace('nan','') + ";" + str(workItem[2]).replace('nan','') + ";" + str(workItem[3]).replace('nan','') + ";" + str(workItem[4]).replace('nan','') + ";" + str(workItem[5]).replace('nan','') + ";" + str(workItem[6]).replace('nan','') + ";" + str(item[0]).replace('nan','') + ";" + str(item[1]).replace('nan','') + ";" + str(item[2]).replace('nan','') + ";" + str(item[3]).replace('nan','') + ";" + str(item[4]).replace('nan','') + ";"+ str(item[5]).replace('nan','') + ";"+ str(item[6]).replace('nan','') + ";"+ str(item[7]).replace('nan','') + ";"+ str(item[8]).replace('nan','') + ";"+ str(item[9]).replace('nan','') + ";"+ str(item[10]).replace('nan','') + ";"+ str(item[11]).replace('nan','') + ";"+ str(item[12]).replace('nan','')) + '\n'
+                        count +=  1
+            return result
+    
+    def createResultForDifferentNames(self, workDataArrayP, migrationWorkDataArrayP):
+            result = ''
+            if((len(workDataArrayP)) >= (len(migrationWorkDataArrayP))):
+                    count = 0
+                    for item in migrationWorkDataArrayP:
                             workItem = workDataArrayP[count]          
 
                             if( workItem[2] == item[5]):
@@ -26,16 +36,6 @@ class migrationModel:
                                     result = 'names are different'
                                     break
                             count +=  1
-            return result
-    
-    def createResultForDifferentNames(self, workDataArrayP, migrationWorkDataArrayP):
-            result = ''
-            if((len(workDataArrayP)) >= (len(migrationWorkDataArrayP))):
-                    count = 0
-                    for item in migrationWorkDataArrayP:
-                        workItem = workDataArrayP[count]
-                        result = result + ( str(workItem[0]).replace('nan','') + ";" + str(workItem[1]).replace('nan','') + ";" + str(workItem[2]).replace('nan','') + ";" + str(workItem[3]).replace('nan','') + ";" + str(workItem[4]).replace('nan','') + ";" + str(workItem[5]).replace('nan','') + ";" + str(workItem[6]).replace('nan','') + ";" + str(item[0]).replace('nan','') + ";" + str(item[1]).replace('nan','') + ";" + str(item[2]).replace('nan','') + ";" + str(item[3]).replace('nan','') + ";" + str(item[4]).replace('nan','') + ";"+ str(item[5]).replace('nan','') + ";"+ str(item[6]).replace('nan','') + ";"+ str(item[7]).replace('nan','') + ";"+ str(item[8]).replace('nan','') + ";"+ str(item[9]).replace('nan','') + ";"+ str(item[10]).replace('nan','') + ";"+ str(item[11]).replace('nan','') + ";"+ str(item[12]).replace('nan','')) + '\n'
-                        count +=  1
             return result
 
     def createWorkArray(self, refNumber, dataArray, indexRefNumberComparisom = 0):
