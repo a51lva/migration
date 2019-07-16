@@ -71,7 +71,7 @@ class migrationModel:
                                     print(refItem + ' - > KO - cant find on migrated document')
     
     def processRefWithNameDifferent(self, refNumber, migrationWorkDataArray, workDataArray):
-            with open("result/result_with_names_differents.csv","w+", encoding="utf-8") as output:                    
+            with open("result/result_with_names_differents.csv","a+", encoding="utf-8") as output:                    
                 result = self.createResultForDifferentNames(workDataArray , migrationWorkDataArray)
                 if( result != ''):
                         output.write( result )
